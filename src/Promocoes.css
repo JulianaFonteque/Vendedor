@@ -1,0 +1,93 @@
+.promocoes-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .promocoes-main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .alerta {
+    background-color: #fff4e5;
+    border: 1px solid #ebd213;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ece116;
+  }
+  
+  .alerta a {
+    color: #6661fb;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .select-filtro {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .input-pesquisa {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .botao-nova-promocao {
+    background-color: #f79f06;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao-nova-promocao:hover {
+    background-color: #e03e00;
+  }
+  
+  .abas {
+    display: flex;
+    gap: 20px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .aba {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+  }
+  
+  .aba.ativa {
+    border-bottom: 2px solid #ff4500;
+    color: #ff4500;
+  }
+  
+  .conteudo-aba {
+    font-size: 16px;
+    color: #555;
+  }
+  

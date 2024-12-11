@@ -1,0 +1,21 @@
+.tela-final-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tela-final-container h1 {
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .tela-final-container p {
+    margin-top: 1rem;
+    color: #555;
+    font-size: 1.2rem;
+  }
+  

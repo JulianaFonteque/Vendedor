@@ -1,0 +1,140 @@
+.nova-promocao-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .nova-promocao-main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .form-promocao {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .periodo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .periodo-info {
+    font-size: 12px;
+    color: #777;
+    margin-top: 5px;
+  }
+
+  .produtos {
+  margin-top: 20px;
+}
+
+.produto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.produto-item input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.produto-item input[type="file"] {
+  padding: 5px;
+}
+
+.produto-imagem-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.add-produto {
+    background-color: #f79f06;
+    color: white;
+    border: none;
+    padding: 5px 8px; /* Ajusta o preenchimento para reduzir o tamanho */
+    font-size: 12px; /* Diminui o tamanho do texto */
+    border-radius: 4px; /* Mantém as bordas arredondadas */
+    cursor: pointer;
+  }
+
+.remove-produto {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-produto:hover,
+.remove-produto:hover {
+  opacity: 0.8;
+}
+
+  
+.salvar-button {
+    background-color: #f70606;
+    color: white;
+    border: none;
+    padding: 10px 10px; /* Reduz o tamanho do botão */
+    font-size: 13px; /* Reduz o tamanho do texto */
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    bottom: 20px; /* Distância do rodapé */
+    right: 20px; /* Distância do lado direito */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Pequeno efeito de sombra */
+  }
+  
+  .salvar-button:hover {
+    background-color: #eb0c0c; /* Cor mais escura ao passar o mouse */
+    opacity: 0.9;
+  }
+  

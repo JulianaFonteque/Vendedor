@@ -1,0 +1,34 @@
+.cadastro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+.cadastro-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.cadastro-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro-right input,
+.cadastro-right button {
+  margin-bottom: 1rem;
+  padding: 10px;
+  font-size: 1rem;
+}

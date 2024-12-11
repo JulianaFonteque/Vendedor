@@ -1,0 +1,117 @@
+.horarios-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.horarios-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.alerta {
+  background-color: #fff4e5;
+  border: 1px solid #ffcc80;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #d68600;
+}
+
+/* Organiza os dias em múltiplas linhas */
+.horarios-tabela {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas por linha */
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os dias */
+.dia-container {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dia-container:hover {
+  transform: scale(1.02);
+}
+
+.dia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Botão de status */
+.status-button {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.status-button.aberto {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-button.fechado {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Estilo para os turnos */
+.turnos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.turno {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.turno input[type="time"] {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Botões de Adicionar e Remover Turnos */
+.remove-turno {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-turno {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-turno:hover,
+.remove-turno:hover {
+  opacity: 0.8;
+}
