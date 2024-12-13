@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu"; // Menu lateral
 import "./NovaPromocao.css"; // Estilos personalizados
+import { PromocoesContext } from "./PromocoesContext"; // Importa o contexto de promoções
 
 const NovaPromocao = () => {
   const navigate = useNavigate();
+  const { adicionarPromocao } = useContext(PromocoesContext); // Usa o contexto para adicionar promoções
+
   const [promocao, setPromocao] = useState({
     nome: "",
     dataInicio: "",
@@ -19,7 +22,16 @@ const NovaPromocao = () => {
   };
 
   const handleAddProduto = () => {
-    setProdutos([...produtos, { nome: "", imagem: null, preview: null }]);
+    setProdutos([
+      ...produtos,
+      {
+        nome: "",
+        precoAtual: "",
+        precoPromocional: "",
+        imagem: null,
+        preview: null,
+      },
+    ]);
   };
 
   const handleProdutoChange = (index, field, value) => {
@@ -41,10 +53,18 @@ const NovaPromocao = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!promocao.nome || !promocao.dataInicio || !promocao.dataFim) {
       alert("Por favor, preencha todos os campos.");
       return;
     }
+
+    const novaPromocao = {
+      ...promocao,
+      produtos,
+    };
+
+    adicionarPromocao(novaPromocao); // Adiciona a nova promoção ao contexto
     alert("Promoção criada com sucesso!");
     navigate("/promocoes"); // Voltar para a tela de promoções
   };
@@ -109,13 +129,34 @@ const NovaPromocao = () => {
                   onChange={(e) =>
                     handleProdutoChange(index, "nome", e.target.value)
                   }
+                  required
+                />
+                <input
+                  type="number"
+                  placeholder="Preço Atual"
+                  value={produto.precoAtual}
+                  onChange={(e) =>
+                    handleProdutoChange(index, "precoAtual", e.target.value)
+                  }
+                  required
+                />
+                <input
+                  type="number"
+                  placeholder="Preço Promocional"
+                  value={produto.precoPromocional}
+                  onChange={(e) =>
+                    handleProdutoChange(
+                      index,
+                      "precoPromocional",
+                      e.target.value
+                    )
+                  }
+                  required
                 />
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={(e) =>
-                    handleProdutoChange(index, "imagem", e)
-                  }
+                  onChange={(e) => handleProdutoChange(index, "imagem", e)}
                 />
                 {produto.preview && (
                   <img

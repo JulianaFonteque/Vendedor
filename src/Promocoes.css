@@ -1,93 +1,283 @@
 .promocoes-container {
-    display: flex;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-  }
-  
-  .promocoes-main {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .alerta {
-    background-color: #fff4e5;
-    border: 1px solid #ebd213;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #ece116;
-  }
-  
-  .alerta a {
-    color: #6661fb;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.promocoes-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.alerta {
+  background-color: #fff4e5;
+  border: 1px solid #ebd213;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #d68600;
+}
+
+.alerta a {
+  color: #6661fb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.select-filtro {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.input-pesquisa {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.botao-nova-promocao {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-nova-promocao:hover {
+  background-color: #e03e00;
+  transform: scale(1.05);
+}
+
+.abas {
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.aba {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.aba.ativa {
+  border-bottom: 2px solid #ff4500;
+  color: #ff4500;
+}
+
+.conteudo-aba {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Tabela de Promoções */
+.tabela-promocoes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tabela-promocoes th,
+.tabela-promocoes td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.tabela-promocoes th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabela-promocoes tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Produtos na Lista */
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.produto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  text-align: center;
+}
+
+.produto-imagem-listagem {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.produto-nome {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.preco-atual {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.preco-promocional {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+.acao-editar,
+.acao-excluir {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.acao-editar {
+  background-color: #007bff;
+  color: white;
+}
+
+.acao-excluir {
+  background-color: #dc3545;
+  color: white;
+}
+
+.acao-editar:hover {
+  background-color: #0056b3;
+}
+
+.acao-excluir:hover {
+  background-color: #c82333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .cabecalho {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .select-filtro {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .input-pesquisa {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
+
   .botao-nova-promocao {
-    background-color: #f79f06;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
   }
-  
-  .botao-nova-promocao:hover {
-    background-color: #e03e00;
-  }
-  
-  .abas {
-    display: flex;
-    gap: 20px;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
-  }
-  
-  .aba {
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s ease, color 0.3s ease;
-  }
-  
-  .aba.ativa {
-    border-bottom: 2px solid #ff4500;
-    color: #ff4500;
-  }
-  
-  .conteudo-aba {
-    font-size: 16px;
-    color: #555;
-  }
-  
+
+  /* Tabela de Promoções */
+.tabela-promocoes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tabela-promocoes th,
+.tabela-promocoes td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.tabela-promocoes th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabela-promocoes img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+.tabela-promocoes .preco-atual {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+}
+
+.tabela-promocoes .preco-promocional {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+.tabela-promocoes .acao-editar,
+.tabela-promocoes .acao-excluir {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tabela-promocoes .acao-editar {
+  background-color: #007bff;
+  color: white;
+}
+
+.tabela-promocoes .acao-excluir {
+  background-color: #dc3545;
+  color: white;
+}
+
+.tabela-promocoes .acao-editar:hover {
+  background-color: #0056b3;
+}
+
+.tabela-promocoes .acao-excluir:hover {
+  background-color: #c82333;
+}
+
+}

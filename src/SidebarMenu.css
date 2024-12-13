@@ -1,7 +1,7 @@
 /* Estilo Geral da Barra Lateral */
 .sidebar {
     width: 250px;
-    background-color: #ffffff;
+    background-color: #7f7c7c;
     border-right: 4px solid #ddd;
     display: flex;
     flex-direction: column;

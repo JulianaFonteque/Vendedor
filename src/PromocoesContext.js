@@ -1,4 +1,5 @@
-import React, { createContext, useState } from "react";
+// PromocoesContext.js
+import React, { createContext, useState, useContext } from "react";
 
 export const PromocoesContext = createContext();
 
@@ -15,3 +16,5 @@ export const PromocoesProvider = ({ children }) => {
     </PromocoesContext.Provider>
   );
 };
+
+export const usePromocoes = () => useContext(PromocoesContext);

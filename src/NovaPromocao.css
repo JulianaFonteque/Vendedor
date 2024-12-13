@@ -91,6 +91,8 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 10px;
+  border: 1px solid #ddd; /* Bordas leves para destacar a imagem */
+  display: block; 
 }
 
 .add-produto {
