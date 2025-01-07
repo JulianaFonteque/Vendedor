@@ -59,11 +59,11 @@ const NovoProduto = () => {
     };
     adicionarProduto(dadosProduto); // Salva o produto no contexto
     alert('Produto cadastrado com sucesso!');
-    navigate('/cardapio'); // Navega para a tela Cardapio após o cadastro
+    navigate('/cardapio'); // Navega para a tela produto após o cadastro
   };
 
   const handleVoltar = () => {
-    navigate('/cardapio'); // Navega para a tela Cardapio
+    navigate('/cardapio'); // Navega para a tela ptoduto
   };
 
   return (

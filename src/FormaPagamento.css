@@ -86,7 +86,7 @@
   .pagamento-item input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #2b68b4;
+    accent-color: #ebd71d;
   }
   
   .pagamento-imagem {
@@ -100,8 +100,8 @@
   .save-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #2b68b4;
-    color: white;
+    background-color: #edce1c;
+    color: rgb(8, 8, 8);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -110,7 +110,7 @@
   }
   
   .save-button:hover {
-    background-color: #2b68b4;
+    background-color: #edce1c;
     transform: scale(1.03);
   }
   

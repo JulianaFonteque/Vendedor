@@ -1,24 +1,67 @@
 .cadastro-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   padding: 20px;
-  background-color: #f8f8f8;
+
+
+
+
+
+
+
+  /* Adiciona imagem de fundo */
+  /*background-image: url('/images/imagem.png');
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   font-family: Arial, sans-serif;
+  position: relative;*/
 }
 
 .cadastro-left {
   flex: 1;
-  padding: 20px;
+  padding: 50px;
+  color: #fff;
+  background-color: rgba(249, 249, 248, 0.5); /* Fundo escuro transparente */
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cadastro-left h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cadastro-left p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .cadastro-right {
   flex: 1;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  background: #fffffd;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-right h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cadastro-right p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 .cadastro-right form {
@@ -26,9 +69,60 @@
   flex-direction: column;
 }
 
-.cadastro-right input,
-.cadastro-right button {
-  margin-bottom: 1rem;
+.cadastro-right input {
+  margin-bottom: 15px;
   padding: 10px;
-  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.cadastro-right button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cadastro-right button:hover {
+  background-color: #e03e00;
+  transform: scale(1.05);
+}
+
+.cadastro-right small {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+  display: block;
+}
+
+.cadastro-right a {
+  color: #ff4500;
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cadastro-container {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .cadastro-left {
+    padding: 30px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .cadastro-right {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+  }
 }

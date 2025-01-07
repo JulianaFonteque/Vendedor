@@ -13,6 +13,8 @@ import AreasEntrega from './AreasEntrega'; // Tela Áreas de Entrega
 import FormaPagamento from './FormaPagamento'; // Tela Formas de Pagamento
 import Promocoes from './Promocoes'; // Tela Promoções
 import NovaPromocao from './NovaPromocao'; // Tela Nova Promoção
+import Perfil from './Perfil'; // Tela Perfil
+import Desempenho from './Desempenho';
 
 function App() {
   return (
@@ -20,11 +22,11 @@ function App() {
       <PromocoesProvider>
         <Router>
           <Routes>
-            {/* Rotas Configuradas */}
+            {/* Rotas principais */}
             <Route path="/" element={<CadastroLoja />} />
             <Route path="/detalhes" element={<CadastroDetalhes />} />
             <Route path="/final" element={<CadastroFinal />} />
-            <Route path="/produto" element={<CadastroProduto />} />
+            <Route path="/cadastro-produto" element={<CadastroProduto />} />
             <Route path="/cardapio" element={<Cardapio />} />
             <Route path="/novoproduto" element={<NovoProduto />} />
             <Route path="/horarios" element={<Horarios />} />
@@ -32,12 +34,15 @@ function App() {
             <Route path="/pagamento" element={<FormaPagamento />} />
             <Route path="/promocoes" element={<Promocoes />} />
             <Route path="/nova-promocao" element={<NovaPromocao />} />
+            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/desempenho" element={<Desempenho />} />
+            <Route path="/produto" element={<CadastroProduto />} />
 
-            {/* Exemplos de Rotas Adicionais */}
+
+            {/* Rotas adicionais */}
             <Route path="/financeiro" element={<div>Financeiro</div>} />
             <Route path="/servicos" element={<div>Serviços</div>} />
-            <Route path="/perfil" element={<div>Perfil</div>} />
-            <Route path="/desempenho" element={<div>Desempenho</div>} />
+            
             <Route path="/conquistas" element={<div>Conquistas</div>} />
             <Route path="/ifoodshop" element={<div>JA Shop</div>} />
             <Route path="/ajuda" element={<div>Chamados e ajuda</div>} />

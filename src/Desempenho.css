@@ -1,0 +1,141 @@
+.desempenho-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .desempenho-layout {
+    display: flex;
+    min-height: 100vh; /* Garante que a tela ocupe toda a altura da janela */
+  }
+  
+  .sidebar {
+    flex: 0 0 250px; /* Largura fixa do menu lateral */
+  }
+  
+  .desempenho-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+
+
+  .desempenho-header {
+    margin-bottom: 20px;
+  }
+  
+  .desempenho-header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .desempenho-header p {
+    color: #555;
+  }
+  
+  .desempenho-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .desempenho-tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .desempenho-tabs button.active {
+    background-color: #f8d926;
+    color: #0c0b0b;
+  }
+  
+  .desempenho-tabs button:hover {
+    background-color: #ffe5d5;
+  }
+  
+  .desempenho-filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filtro-periodo, .filtro-servico {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .filtro-periodo label, .filtro-servico label {
+    font-weight: bold;
+  }
+  
+  .filtro-periodo button, .filtro-servico button {
+    padding: 5px 15px;
+    border: none;
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .filtro-periodo button.active, .filtro-servico button.active {
+    background-color: #f8d926;
+    color: #141414;
+  }
+  
+  .filtro-periodo button:hover, .filtro-servico button:hover {
+    background-color: #ffe5d5;
+  }
+  
+  .indicadores-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .indicador {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .indicador h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .indicador .valor {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .indicador .variacao {
+    font-size: 14px;
+  }
+  
+  .variacao.positivo {
+    color: #28a745;
+  }
+  
+  .variacao.negativo {
+    color: #f8d926;
+  }
+
+  .input-periodo {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 120px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  

@@ -64,12 +64,8 @@ const SidebarMenu = () => {
           <li onClick={() => navigate('/desempenho')} className="menu-item">
             <FaChartLine className="icon" /> Desempenho
           </li>
-          <li onClick={() => navigate('/conquistas')} className="menu-item">
-            <FaMedal className="icon" /> Conquistas
-          </li>
-          <li onClick={() => navigate('/ifoodshop')} className="menu-item">
-            <FaShoppingCart className="icon" /> JA Shop
-          </li>
+         
+          
           <li onClick={() => navigate('/ajuda')} className="menu-item">
             <FaQuestionCircle className="icon" /> Chamados e ajuda
           </li>
