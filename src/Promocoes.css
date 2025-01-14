@@ -1,8 +1,5 @@
 /* Layout Geral */
 
-
-
-
 .promocoes-container {
   display: flex;
   height: 100vh;
@@ -17,7 +14,7 @@
 }
 
 .alerta {
-  background-color: #fff4e5;
+  background-color: #fdd682;
   border: 1px solid #ebd213;
   padding: 10px;
   border-radius: 5px;
@@ -96,7 +93,7 @@
 
 .conteudo-aba {
   font-size: 16px;
-  color: #555;
+  color: #0d0d0d;
 }
 
 /* Tabela de Promoções */

@@ -1,12 +1,36 @@
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ProdutoContext } from './ProdutoContext'; // Importa o contexto
-import SidebarMenu from './SidebarMenu'; // Importa o componente SidebarMenu
+import React, { useState, useEffect } from 'react';
+import SidebarMenu from './SidebarMenu';
 import './CadastroProduto.css';
+import { FaUser, FaMapMarkerAlt, FaMoneyBillWave, FaBox } from 'react-icons/fa';
 
 const CadastroProduto = () => {
-  const navigate = useNavigate(); // Instancia o hook para navegação
-  const { produtos } = useContext(ProdutoContext); // Acessa os produtos do contexto
+  const [pedidos, setPedidos] = useState([
+    { id: '#18 - 1B4ZZ7', cliente: 'Vilma', endereco: 'Conjunto João Nogueira', total: 'R$ 34,79', status: 'pendente', tempo: 'poucos segundos' },
+    { id: '#17 - 6N8RZS', cliente: 'Gleide', endereco: 'Jardim Campo Novo', total: 'R$ 56,61', status: 'aprovado', tempo: '3 minutos' },
+    { id: '#13 - HFH9LL', cliente: 'Jaerson', endereco: 'Centro', total: 'R$ 32,79', status: 'separacao', tempo: '24 minutos' },
+    { id: '#10 - 1DYW4', cliente: 'Daniele', endereco: 'Centro', total: 'R$ 62,73', status: 'entregando', tempo: '49 minutos' }
+  ]);
+
+  const [notificacoes, setNotificacoes] = useState([]);
+
+  // Simular notificações de novo pedido
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNotificacoes((prev) => [...prev, 'Novo pedido recebido 🔔']);
+    }, 80000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleRemoverNotificacao = (index) => {
+    setNotificacoes((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const colunas = [
+    { id: 'pendente', titulo: 'Pendente' },
+    { id: 'aprovado', titulo: 'Aprovado' },
+    { id: 'separacao', titulo: 'Separação' },
+    { id: 'entregando', titulo: 'Entregando' }
+  ];
 
   return (
     <div className="cadastro-produto-container">
@@ -15,54 +39,76 @@ const CadastroProduto = () => {
 
       {/* Conteúdo Principal */}
       <main className="content">
-        <header className="header">
-          <button className="back-button" onClick={() => navigate(-1)}>
-            ← Voltar
-          </button>
-        </header>
-        <div className="main-content">
-          <h1>Seus Novos Pedidos Aparecerão Aqui!</h1>
-
-          {/* Lista de Produtos */}
-          <div className="produto-list">
-            {produtos.length === 0 ? (
-              <p>Nenhum novo pedido.</p>
-            ) : (
-              produtos.map((produto, index) => (
-                <div key={index} className="produto-item">
-                  <h3>{produto.nome}</h3>
-                  <p>Categoria: {produto.categoria}</p>
-                  <p>Preço: R$ {produto.precoVenda}</p>
-                  <p>Estoque: {produto.estoqueAtual}</p>
-                  <p>Dimensões: {produto.dimensoes}</p>
-                  {produto.descricao && <p>Descrição: {produto.descricao}</p>}
-
-                  {/* Imagens do Produto */}
-                  <div className="produto-imagens">
-                    {produto.imagens &&
-                      produto.imagens.map((img, i) => (
-                        <img
-                          key={i}
-                          src={URL.createObjectURL(img)}
-                          alt={`Imagem do produto ${produto.nome} ${i}`}
-                          className="produto-imagem"
-                        />
-                      ))}
-                  </div>
-
-                  {/* Vídeo do Produto */}
-                  {produto.video && (
-                    <div className="produto-video">
-                      <video controls>
-                        <source src={URL.createObjectURL(produto.video)} type="video/mp4" />
-                        Seu navegador não suporta a reprodução de vídeos.
-                      </video>
-                    </div>
-                  )}
-                </div>
-              ))
-            )}
+        {/* Cabeçalho */}
+        <header className="page-header">
+          <h1>Gestor de pedidos</h1>
+          <div className="status-info">
+            <div>
+              <span>0</span>
+              <p>não entregues</p>
+            </div>
+            <div>
+              <span>9</span>
+              <p>concluídos</p>
+            </div>
+            <div>
+              <span>41 minutos</span>
+              <p>Tempo de entrega médio</p>
+            </div>
           </div>
+          <div className="header-actions">
+            <FaUser className="icon" title="Perfil" />
+            <FaMapMarkerAlt className="icon" title="Atualizar" />
+          </div>
+        </header>
+
+        {/* Notificações */}
+        <div className="notificacoes-container">
+          {notificacoes.map((notificacao, index) => (
+            <div
+              key={index}
+              className="notificacao"
+              onClick={() => handleRemoverNotificacao(index)}
+            >
+              {notificacao}
+            </div>
+          ))}
+        </div>
+
+        {/* Colunas de pedidos */}
+        <div className="pedidos-container">
+          {colunas.map((coluna) => (
+            <div key={coluna.id} className="pedido-coluna">
+              <h2>{coluna.titulo}</h2>
+              {pedidos
+                .filter((pedido) => pedido.status === coluna.id)
+                .map((pedido) => (
+                  <div key={pedido.id} className="pedido-card">
+                    <h3>{pedido.id}</h3>
+                    <p>
+                      <FaUser className="icon" /> <strong>Cliente:</strong>{' '}
+                      {pedido.cliente}
+                    </p>
+                    <p>
+                      <FaMapMarkerAlt className="icon" />{' '}
+                      <strong>Endereço:</strong> {pedido.endereco}
+                    </p>
+                    <p>
+                      <FaMoneyBillWave className="icon" /> <strong>Total:</strong>{' '}
+                      {pedido.total}
+                    </p>
+                    <p className="tempo">{pedido.tempo}</p>
+                    <button className="acao-button">
+                      {coluna.id === 'pendente'
+                        ? 'Aceitar'
+                        : coluna.id === 'aprovado'
+                        ? 'Preparar'
+                        : 'Enviar'}
+                    </button>
+                  </div>
+                ))}
+            </div>
+          ))}
         </div>
       </main>
     </div>

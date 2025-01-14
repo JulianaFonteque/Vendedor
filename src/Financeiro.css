@@ -1,0 +1,266 @@
+/* Layout Geral */
+.financeiro-page {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+.financeiro-container {
+    flex: 1;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+  
+  /* Cabeçalho */
+.financeiro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.financeiro-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+  
+.financeiro-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #777;
+}
+  
+.financeiro-header .periodo {
+    color: red;
+    font-weight: bold;
+}
+  
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+  
+.ajuda-button,
+.baixar-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+.ajuda-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+  
+.baixar-button {
+    background-color: #007bff;
+    color: white;
+}
+  
+  /* Abas de navegação */
+.tabs-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.tab-button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+  
+.tab-button.active {
+    border-color: red;
+    color: red;
+    font-weight: bold;
+}
+  
+  /* Conteúdo Principal */
+.detalhamento-container {
+    display: flex;
+    gap: 20px;
+}
+  
+.valor-receber {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.valor-receber h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+  
+.valor-receber .valor {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+  
+.valor-receber .status {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+  
+.valor-receber .detalhar-link {
+    color: red;
+    text-decoration: none;
+    font-size: 14px;
+}
+  
+.valor-receber .alerta {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #856404;
+}
+  
+  /* Detalhamento de Valores */
+.detalhamento-valores {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.detalhamento-valores h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+  
+.valores-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+  
+.valores-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+}
+  
+.valores-table tfoot td {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+  
+.detalhar-link {
+    color: red;
+    text-decoration: none;
+}
+  
+  /* Lista de Pedidos */
+.pedidos-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.pedidos-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.pedido-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+  
+.pedido-item:last-child {
+    border-bottom: none;
+}
+  
+.pedido-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+  
+.pedido-item strong {
+    color: #333;
+}
+  
+  /* Responsividade */
+@media (max-width: 768px) {
+    .detalhamento-container {
+      flex-direction: column;
+    }
+  
+    .header-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .tabs-container {
+      flex-wrap: wrap;
+    }
+}
+
+/* Estilo da tabela de pedidos */
+.pedidos-container {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pedidos-table {
+    width: 150%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .pedidos-table th,
+  .pedidos-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .pedidos-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .pedidos-table td:last-child {
+    text-align: center;
+  }
+  
+  .detalhar-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

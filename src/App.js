@@ -15,6 +15,7 @@ import Promocoes from './Promocoes'; // Tela Promoções
 import NovaPromocao from './NovaPromocao'; // Tela Nova Promoção
 import Perfil from './Perfil'; // Tela Perfil
 import Desempenho from './Desempenho';
+import Financeiro from './Financeiro';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/desempenho" element={<Desempenho />} />
             <Route path="/produto" element={<CadastroProduto />} />
+            <Route path="/financeiro" element={<Financeiro />} />
 
 
             {/* Rotas adicionais */}

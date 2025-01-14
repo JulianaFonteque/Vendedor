@@ -34,9 +34,7 @@ const SidebarMenu = () => {
           <li onClick={() => navigate('/produto')} className="menu-item">
             <FaHome className="icon" /> Início
           </li>
-          <li onClick={() => navigate('/pedidos-finalizados')} className="menu-item">
-            <FaCheckCircle className="icon" /> Pedidos Finalizados
-          </li>
+          
           <li onClick={() => navigate('/financeiro')} className="menu-item">
             <FaFileInvoiceDollar className="icon" /> Financeiro
           </li>
