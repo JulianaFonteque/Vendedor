@@ -16,6 +16,8 @@ import NovaPromocao from './NovaPromocao'; // Tela Nova Promoção
 import Perfil from './Perfil'; // Tela Perfil
 import Desempenho from './Desempenho';
 import Financeiro from './Financeiro';
+import ChamadoseAjuda from './ChamadoseAjuda';
+import Servicos from './Servicos';
 
 function App() {
   return (
@@ -39,15 +41,17 @@ function App() {
             <Route path="/desempenho" element={<Desempenho />} />
             <Route path="/produto" element={<CadastroProduto />} />
             <Route path="/financeiro" element={<Financeiro />} />
+            <Route path="/ajuda" element={<ChamadoseAjuda />} />
+            <Route path="/servicos" element={<Servicos />} />
 
 
             {/* Rotas adicionais */}
             <Route path="/financeiro" element={<div>Financeiro</div>} />
-            <Route path="/servicos" element={<div>Serviços</div>} />
+            
             
             <Route path="/conquistas" element={<div>Conquistas</div>} />
             <Route path="/ifoodshop" element={<div>JA Shop</div>} />
-            <Route path="/ajuda" element={<div>Chamados e ajuda</div>} />
+            
             <Route path="/politicas" element={<div>Políticas</div>} />
           </Routes>
         </Router>

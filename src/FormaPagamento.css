@@ -100,8 +100,8 @@
   .save-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #edce1c;
-    color: rgb(8, 8, 8);
+    background-color: #ea4949;
+    color: rgb(254, 253, 253);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -110,7 +110,7 @@
   }
   
   .save-button:hover {
-    background-color: #edce1c;
+    background-color: #ea4949;
     transform: scale(1.03);
   }
   

@@ -1,0 +1,242 @@
+/* Layout Geral */
+.cardapio-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 100%;
+}
+
+.sidebar-header {
+    text-align: center;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.sidebar-header .status {
+    color: green;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.sidebar-header .status-desc {
+    font-size: 12px;
+    color: #666;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu li:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.menu .icon {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Conteúdo Principal */
+.cardapio-main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Cabeçalho */
+.cardapio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cardapio-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cardapio-header p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Barra de Ações */
+.cardapio-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.action-button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #f0f0f0;
+}
+
+.add-product-button {
+    background-color: #20c997;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-product-button:hover {
+    background-color: #17a589;
+}
+
+/* Conteúdo */
+.cardapio-content {
+    margin-top: 20px;
+}
+
+/* Estado Vazio */
+.empty-state {
+    text-align: center;
+    color: #777;
+}
+
+.empty-state-image {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Tabela de Produtos */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product-table th, 
+.product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.product-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.product-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Botões de Ações na Tabela */
+.product-action-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-action-button:hover {
+    background-color: #0056b3;
+}
+
+.product-delete-button {
+    background-color: #dc3545;
+}
+
+.product-delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cardapio-container {
+        flex-direction: column;
+    }
+
+    .cardapio-actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .product-table th, 
+    .product-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .add-product-button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}

@@ -65,7 +65,7 @@ const SidebarMenu = () => {
          
           
           <li onClick={() => navigate('/ajuda')} className="menu-item">
-            <FaQuestionCircle className="icon" /> Chamados e ajuda
+            <FaQuestionCircle className="icon" /> ChamadoseAjuda
           </li>
           <li onClick={() => navigate('/politicas')} className="menu-item">
             <FaGavel className="icon" /> Políticas

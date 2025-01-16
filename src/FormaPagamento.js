@@ -13,13 +13,13 @@ const metodosPagamentoEntrega = [
 ];
 
 const metodosPagamentoApp = [
-    { id: 8, nome: "Dinheiro", imagem: "/images/dinheiro.png" },
-    { id: 9, nome: "Crédito - Mastercard ", imagem: "/images/mastercard.png" },
-    { id: 10, nome: "Crédito - Visa ", imagem: "/images/visa.png" },
-    { id: 11, nome: "Débito - Mastercard ", imagem: "/images/mastercard.png" },
-    { id: 12, nome: "Débito - Elo ", imagem: "/images/elo.png" },
-    { id: 13, nome: "Débito - Visa ", imagem: "/images/visa.png" },
-    { id: 14, nome: "Pix", imagem: "/images/pix.png" },
+    
+    { id: 8, nome: "Crédito - Mastercard ", imagem: "/images/mastercard.png" },
+    { id: 9, nome: "Crédito - Visa ", imagem: "/images/visa.png" },
+    { id: 10, nome: "Débito - Mastercard ", imagem: "/images/mastercard.png" },
+    { id: 11, nome: "Débito - Elo ", imagem: "/images/elo.png" },
+    { id: 12, nome: "Débito - Visa ", imagem: "/images/visa.png" },
+    { id: 13, nome: "Pix", imagem: "/images/pix.png" },
 ];
 
 const FormaPagamento = () => {

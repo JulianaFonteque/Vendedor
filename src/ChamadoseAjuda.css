@@ -1,0 +1,260 @@
+/* Layout Geral */
+.chamados-page {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+  
+.chamados-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+  
+/* Cabeçalho */
+.chamados-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+.chamados-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #101010;
+}
+  
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.search-input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+  
+.search-button {
+    padding: 10px 20px;
+    background-color: #d63031;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+  
+.quick-search {
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+.quick-search span {
+    font-weight: bold;
+}
+  
+.quick-search button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #868484;
+    cursor: pointer;
+    font-size: 12px;
+}
+  
+/* Conteúdos Relevantes */
+.conteudos-relevantes h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+  
+.conteudos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+  
+.conteudo-card {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+  
+.conteudo-card:hover {
+    transform: translateY(-5px);
+}
+  
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #f5c012;
+}
+  
+.conteudo-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+  
+.conteudo-card p {
+    font-size: 14px;
+    color: #555;
+}
+  
+/* Feedback */
+.feedback-section {
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.feedback-button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.feedback-button.positivo {
+    background-color: #2ecc71;
+    color: white;
+    font-size: 10px;
+}
+  
+.feedback-button.negativo {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 10px;
+}
+  
+/* Seção de Vídeos */
+.videos-section h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+  
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+  
+.video-card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+  
+.video-card:hover {
+    transform: translateY(-5px);
+}
+  
+.play-icon {
+    font-size: 40px;
+    color: #d63031;
+    margin-bottom: 10px;
+}
+  
+.video-card p {
+    font-size: 14px;
+    color: #555;
+}
+  
+/* Botão flutuante de chat */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d63031;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+  
+/* Janela de chat */
+.chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+  
+/* Cabeçalho do chat */
+.chat-header {
+    background-color: #f4c433;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+  
+.chat-header .close-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+  
+/* Corpo do chat */
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+    color: #333;
+}
+  
+/* Rodapé do chat */
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+  
+.chat-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.chat-footer button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #d63031;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
