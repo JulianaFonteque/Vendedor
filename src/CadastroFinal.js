@@ -33,7 +33,7 @@ const CadastroFinal = () => {
         >
           <h3>Básico</h3>
           <p>Sua loja visível no app do JA. Entregas feitas pela própria loja.</p>
-          <p><strong>12% Comissão</strong></p>
+          <p><strong>5% Comissão </strong></p>
           <p><strong>R$ 100,00 / mês</strong></p>
           <p>Apenas se faturar acima de R$ 1.800,00</p>
           <p className="free">1º mês grátis!</p>
@@ -47,7 +47,7 @@ const CadastroFinal = () => {
         >
           <h3>Entrega</h3>
           <p>Sua loja visível no app do JA. Entregas feitas por parceiros JA.</p>
-          <p><strong>23% Comissão</strong></p>
+          <p><strong>10% Comissão</strong></p>
           <p><strong>R$ 130,00 / mês</strong></p>
           <p>Apenas se faturar acima de R$ 1.800,00</p>
           <p className="free">1º mês grátis!</p>

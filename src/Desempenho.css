@@ -50,8 +50,8 @@
   }
   
   .desempenho-tabs button.active {
-    background-color: #f8d926;
-    color: #0c0b0b;
+    background-color: #f51f1f;
+    color: #faf9f9;
   }
   
   .desempenho-tabs button:hover {
@@ -84,8 +84,8 @@
   }
   
   .filtro-periodo button.active, .filtro-servico button.active {
-    background-color: #f8d926;
-    color: #141414;
+    background-color: #f51f1f;;
+    color: #fdfbfb;
   }
   
   .filtro-periodo button:hover, .filtro-servico button:hover {

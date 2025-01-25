@@ -1,6 +1,6 @@
 .horarios-container {
   display: flex;
-  height: 100vh;
+  height: 120vh;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
 }
@@ -102,7 +102,7 @@
 }
 
 .add-turno {
-  background-color: #0c0c0d;
+  background-color: #3a3af5;
   color: rgb(254, 252, 252);
   border: none;
   padding: 5px 10px;

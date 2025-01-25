@@ -3,18 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import './CadastroLoja.css';
 
 const CadastroLoja = () => {
-  const [isLogin, setIsLogin] = useState(false); // Estado para alternar entre login e cadastro
-  const navigate = useNavigate(); // Hook para redirecionamento
+  const [isLogin, setIsLogin] = useState(false);
+  const navigate = useNavigate();
 
   const handleCadastro = (e) => {
     e.preventDefault();
-    navigate('/detalhes'); // Redireciona para a tela de detalhes após o cadastro
+    navigate('/detalhes');
   };
 
   const handleLogin = (e) => {
     e.preventDefault();
     console.log('Login realizado com sucesso');
-    navigate('/cadastro-produto'); // Redireciona para a tela de CadastroProduto.js
+    navigate('/cadastro-produto');
   };
 
   return (
@@ -31,7 +31,15 @@ const CadastroLoja = () => {
       </nav>
 
       {/* Conteúdo principal */}
-      <div className="cadastro-container">
+      <div
+        className="cadastro-container"
+        style={{
+          backgroundImage: 'url(/images/delivery.png)', // Caminho público para a imagem
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <div className="cadastro-left">
           <h1>Alavanque suas vendas JA!</h1>
           <p>

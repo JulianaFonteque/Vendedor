@@ -124,30 +124,30 @@ const Financeiro = () => {
           </div>
         )}
 
-        {selectedTab === 'pedidos' && (
-          <div className="pedidos-container">
-            <h2>Lista de Pedidos</h2>
-            <table className="pedidos-table">
-              <thead>
-                <tr>
-                  <th>Descrição</th>
-                  <th>Status</th>
-                  <th>Data</th>
-                  <th>Valor de vendas</th>
-                  <th>Valor do repasse</th>
-                  <th>Ações</th>
-                </tr>
-              </thead>
-              <tbody>
-                {pedidos.map((pedido, index) => (
-                  <tr key={index}>
-                    <td>{pedido.descricao}</td>
-                    <td>{pedido.status}</td>
-                    <td>{pedido.data}</td>
-                    <td>{pedido.valorVendas}</td>
-                    <td>{pedido.valorRepasse}</td>
-                    <td>
-                      <button className="detalhar-button">🔍</button>
+{selectedTab === 'pedidos' && (
+  <div className="pedidos-container">
+    <h2>Lista de Pedidos</h2>
+    <table className="pedidos-table">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Status</th>
+          <th>Data</th>
+          <th>Valor de vendas</th>
+          <th>Valor do repasse</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {pedidos.map((pedido, index) => (
+          <tr key={index}>
+            <td>{pedido.descricao}</td>
+            <td>{pedido.status}</td>
+            <td>{pedido.data}</td>
+            <td>{pedido.valorVendas}</td>
+            <td>{pedido.valorRepasse}</td>
+            <td>
+              <button className="detalhar-button">🔍</button>
                     </td>
                   </tr>
                 ))}
